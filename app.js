@@ -8,7 +8,7 @@ var express = require('express')
 
 
 var app = express()
-var port = 80
+var port = process.env.PORT
 
 function compile(str, path) {
   return stylus(str)
