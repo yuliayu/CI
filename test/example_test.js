@@ -10,6 +10,6 @@ var branchName = process.env.TRAVIS_BRANCH
 describe('Home page tests', function() {
     it('Header is correct', function() {
         browser.url(branchUrl)
-        browser.getText('h1').should.equal('My Site')
+        browser.getText('h1').should.equal('Your Site')
     });
 });
