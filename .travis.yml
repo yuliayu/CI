@@ -19,13 +19,13 @@ before_deploy:
 - cat .netrc >> $HOME/.netrc
 - chmod 0600 /home/travis/.netrc
 - heroku apps
-- heroku apps | grep -q cgnDemoYK12-$TRAVIS_BRANCH || heroku apps:create cgnDemoYK12-$TRAVIS_BRANCH
-- heroku git:remote -a cgnDemoYK12-$TRAVIS_BRANCH
+- heroku apps | grep -q cgndemoyk12-$TRAVIS_BRANCH || heroku apps:create cgndemoyk12-$TRAVIS_BRANCH
+- heroku git:remote -a cgndemoyk12-$TRAVIS_BRANCH
 
 deploy:
   provider: heroku
   api_key: 4ecf9339-2881-4ed9-b998-e14d484b6104
-  app: cgnDemoYK12-$TRAVIS_BRANCH
+  app: cgndemoyk12-$TRAVIS_BRANCH
   on: $TRAVIS_BRANCH
 
 after_deploy:
